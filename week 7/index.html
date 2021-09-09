@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+  <demo-component
+    v-bind:title="title"
+    v-bind:likes="40"
+    v-bind:commentids="commentids"
+    v-bind:author="author"
+  ></demo-component>
+
+  <demo-component
+    v-bind:title="post.title"
+    v-bind:likes="post.likes"
+    v-bind:commentids="post.commentids"
+    v-bind:author="post.author"
+    v-on:sayhi="sayHi"
+  ></demo-component>
+
+  <component-a></component-a>
+  
+
+
+
+  </div>
+  <script>
+    Vue.component("demo-component",{
+      props:{
+        title:String,
+        likes:Number,
+        commentids:Array,
+        author:Object,
+      },
+      template:'<div><p><demoComponent></demoComponent></p> \
+        <h3>{{title}} and likes {{likes}} by {{author.name}}</h3> \
+        <h6></h6><button v-on:click="$emit(\'sayhi\')">Say Hi</button>\
+        </div>',
+      })
+
+      Vue.component("demoComponent",{
+        template:"<p>this is a message</p>",
+      })
+
+      var componentA={
+        template:"<p>another paragraph</p>",
+      }
+
+
+
+
+    var app=new Vue({
+      el: "#app",
+        data:{
+          title:"Hello",
+          likes: 48,
+          commentids:[23,10,15],
+          author:{
+            name:'Ayan',
+        },
+        post:{
+          title:"Hello",
+          likes: 48,
+          commentids:[23,10,15],
+          author:{
+            name:'Ayan',
+        },
+      },
+    },    
+      
+      components:{
+        "component-a": componentA,
+
+      },
+      methods:{
+        sayHi: function(){
+          alert("hi");
+        },
+      },
+
+    })
+  </script>
+    
+
+</body>
+
+
+
+
+
+</html>

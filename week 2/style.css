@@ -1,0 +1,189 @@
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right;
+  }
+
+/*text*/
+  #rcorners {
+    border-radius: 25px;
+    background: #333;
+    padding: 20px; 
+    width: 1400px;
+    height: 550px;  
+  }
+  
+  body {
+    background-color: #1abc9c;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  #rightalign {
+    text-align: center;
+    color: white;
+    border-radius: 25px;
+    background: #333;
+    padding: 20px; 
+    width: 350px;
+    height: 400px; 
+    position: absolute;
+    right: 0px;
+}
+
+#leftbox {
+    text-align: center;
+    color: white;
+    border-radius: 25px;
+    background: #333;
+    padding: 20px; 
+    width: 100px;
+    height: 70px; 
+    position: absolute;
+    left: 10px;
+}
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #333;
+    padding: 20px; 
+    width: 400px;
+    height: 75px;  
+    background: white;
+  }
+  #rightrcorners2 {
+    text-align: right;
+
+  }
+  #rightalign2 {
+    text-align: center;
+    color: black;
+    border-radius: 25px;
+    background: white;
+    padding: 10px; 
+    width: 350px;
+    height: 450px; 
+    position: absolute;
+    left:  1000px;
+    bottom: 45px;
+}
+
+/* Footer */
+.footer {
+    padding: 100px;
+    text-align: center;
+    background: #ddd;
+  }
+  /* Header/logo Title */
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+  }
+  
+  /* Increase the font size of the heading */
+  .header h1 {
+    font-size: 40px;
+  }
+  #rightalign3 {
+    color: black; 
+    position: absolute;
+    left:  1050px;
+    bottom: 600px;
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.info {
+  border-radius: 25px;
+  border: 2px solid #333;
+  padding: 20px; 
+  width: 202px;
+  height: 300px;  
+  background: white;
+}
+.info2 {
+  border-radius: 25px;
+  border: 2px solid #333;
+  padding: 20px; 
+  width: 327px;
+  height: 300px;  
+  background: white;
+}
+#rightalign3 {
+  text-align: center;
+  color: black;
+  border-radius: 25px;
+  background: #4CAF50;
+  padding: 10px; 
+  width: 275px;
+  height: 450px; 
+  position: absolute;
+  left:  645px;
+  bottom: 45px;
+}
+.info3 {
+  border-radius: 25px;
+  border: 2px solid #333;
+  padding: 20px; 
+  width: 255px;
+  height: 300px;  
+  background: white;
+}
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.card {
+  box-shadow: 0 4px 8px 0 #333;
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+

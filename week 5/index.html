@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+  
+
+
+  <div id="app">
+    <p v-bind:title="message">{{message}}</p>
+    <ol>
+      <li v-for="whatever in todos">
+        {{whatever.item}}
+      </li>
+    </ol>
+    <ol>
+      <todo-item v-for="todo in todos"
+      v-bind:todo="todo.item"
+      ></todo-item>
+    </ol>
+  
+  <p><button v-on:click="increaseAnddecrease">increase</button>{{count}} {{pointer}}</p>
+  <counter 
+  v-for="todo in todos"
+  v-bind:text="todo"
+
+  ></counter>
+</div>
+
+  <script>
+    Vue.component("counter",{
+    props:["text"],
+    template: "<button v-on:click='counter ++; pointer --'>{{counter}}, {{pointer}}, {{text.item}}</button>",
+    data: function(){
+      return{
+        counter:0,
+        pointer:0,
+      }
+    }
+  })
+
+    Vue.component("todo-item",{
+      props:['todo'],
+        template: "<li>{{todo}}</li>",
+      })
+
+      var anExample=new Vue({
+        el: "#app",
+        data:{
+          message:"testest",
+          todos:[
+            {key:1, item:"item 1"},
+            {key:2, item:"item 2"},
+            {key:3, item:"item 3"},
+
+          ],
+          count:0,
+          pointer:0,
+        },
+        methods:{
+          increaseAnddecrease: function(){
+            this.count++
+            this.pointer--
+          }
+        }
+      })
+
+  </script>
+
+
+  
+
+
+    
+
+</body>
+
+
+
+
+
+</html>
